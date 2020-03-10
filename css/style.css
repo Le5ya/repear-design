@@ -550,6 +550,22 @@ img {
   color: #fff;
   padding: 1.214rem 1.285rem; }
 
+.section-title__text {
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: none;
+  color: #363636; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  font-size: 1.29rem; }
+
 @media screen and (max-width: 1000px) {
   html {
     font-size: 12px; }
