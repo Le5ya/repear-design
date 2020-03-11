@@ -11,4 +11,10 @@ document.addEventListener('DOMContentLoaded', function(event){
 
   closeBtn.addEventListener('click', switchModal);
 
+  document.addEventListener('keydown', function(event){
+  	if (event.code == 'Escape') {
+  		switchModal();
+  	}
+  });
+
 });
