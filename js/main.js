@@ -32,3 +32,25 @@ $(document).ready(function () {
 	});
 });
 
+// вверх к началу JS
+const backTopBtn = document.querySelector('.button__back-top');
+const up =() => {  
+ let top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);  
+if(top > 0) {  
+  window.scrollBy(0,((top+100)/-10));  
+  t = setTimeout('up()',20);  
+} else clearTimeout(t);  
+return false;  
+} 
+backTopBtn.addEventListener('click', up);
+
+/*$(document).ready(function() {
+var backTopBtn = $('.back-top'),
+		sitePage = $('body'); 
+    
+ backTopBtn.on('click', function() {  
+ sitePage.animate({scrollTop:0},500);    
+  });  
+   
+});   
+*/
