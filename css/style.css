@@ -385,14 +385,16 @@ template {
   max-width: 1256px;
   margin: auto; }
 
-.block {
-  -webkit-animation-name: show;
-  animation-name: show;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  animation-direction: reverse; }
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  width: 50%; }
 
 *, *:before, *after {
   box-sizing: border-box; }
@@ -409,18 +411,45 @@ img {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #fff; }
   .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Vaseva One', cursive; }
-    .section-title__image::before, .section-title__image::after {
-      content: '';
-      display: inline-block;
-      vertical-align: text-top;
-      width: 32px;
-      height: 2px;
-      background-color: #e3b873;
-      margin: 0 10; }
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      font-family: 'Vaseva One', curcive;
+      text-transform: uppercase;
+      line-height: 138.6%; }
+      .section-title__heading--primary {
+        color: #e3b873; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 1px;
+        background-color: #e3b873;
+        margin-left: 2rem; }
+    .section-title__text--light {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 25rem;
+        max-width-color: #fff; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        display: inline-block;
+        vertical-align: text-top;
+        width: 32px;
+        height: 2px;
+        background-color: #e3b873;
+        margin: 0 10; }
 
 .header {
   position: fixed;
@@ -473,6 +502,15 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__content {
     position: relative;
     max-width: 47.85rem;
@@ -496,6 +534,7 @@ img {
     height: 100%; }
   .hero__scroll-down {
     position: absolute;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -545,16 +584,50 @@ img {
   .title--primary {
     color: #e3b873; }
 
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    margin-bottom: 2.42rem;
+    padding-bottom: 2rem; }
+  .swiper-slide__heading {
+    font-size: 1.285rem;
+    line-height: 1.78rem;
+    font-family: 'Yeseva One', cursive;
+    color: #e3b873;
+    text-transform: uppercase;
+    margin-bottom: 0.64rem; }
+
+.swiper-pagination {
+  margin-left: 43px; }
+  .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.7); }
+    .swiper-pagination-bullet-active {
+      background-color: #fff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  left: 0;
+  background: url("../image/arrow-prev.svg") no-repeat center; }
+
+.swiper-button-next {
+  background: url("../image/arrow-next.svg") no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -2px; }
+
 .types__section-title {
   margin-bottom: 2rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
@@ -577,7 +650,7 @@ img {
   font-size: 1.07rem;
   line-height: 1.89rem;
   color: #959595;
-  margin-bottom: 2,5rem; }
+  margin-bottom: 2.5rem; }
 
 .card__pricetag {
   position: absolute;

@@ -9,11 +9,38 @@ img
 	max-width: 100%
 .section
 	padding: 60px 0
+	&--dark
+		background-color: $dark
+		color: $light
 	&-title
 		text-align: center
-		text-transform: uppercase
-		font-family: 'Vaseva One', cursive
+		&--left
+			text-align: left
+		&__heading
+			font-family: 'Vaseva One', curcive
+			text-transform: uppercase
+			line-height: 138.6%		
+			&--primary
+				color: $primary
+		&__word
+			display: flex
+			align-items: center
+			&::after			
+				content: ''
+				width: 90px
+				height: 1px
+				background-color: $primary
+				margin-left: 2rem
+		&__text	
+			&--light
+				font-size: 1.28rem
+				line-height: 2.07rem
+				max-width: 25rem
+			  color: $light
 		&__image
+			display: flex
+			justify-content: center
+			align-items: center
 			&::before, &::after
 				content: ''
 				display: inline-block
