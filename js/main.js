@@ -75,6 +75,44 @@ next.css('left', prev.width() + 10 + bullets.width() + 10);
 bullets.css('left', prev.width() + 10);
 
 new WOW().init();
+
+// Валидация формы
+$('.modal__form').validate({
+	errorClass: "invalid",
+	rules: {
+ 	// simple rule, converted to {required:true}
+ 	userName: {
+ 		required: true,
+ 	  minlength: 2,
+ 	  maxlength: 15
+ 	}, 
+ 	userPhone: "required",
+ 	// compound rule
+ 	userEmail: {
+   	required: true,
+   	email: true
+ 	}	
+ },
+ messages: {
+    userName: {
+    	required: "Заполните поле",
+    	minlength: "Имя не короче  двух букв",
+  		maxlength: "Не более 15 символов"
+    }, 
+    userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+    }
+   }
+  });
+
+  //Маска для телефона
+
+  $('[type=tel]').mask('+7(000)000-00-00', {placeholder:"+7(__)__-__-"});
+
+
+
  
 
 });

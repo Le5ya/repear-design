@@ -46,13 +46,21 @@
 	&__label
 		display: flex
 		align-items: center
+		font-size: 1.42rem
 		&::before
 			content: ''
 			width: 18px
 			height: 18px
 			border: 1px solid $primary
 			border-radius: 1px
-
+			cursor: pointer
+			margin-right: 0.64rem
+		&--center
+			justify-content: center
+label
+	&.invalid
+		color: tomato
+		border-bottom: 1px solid tomato
 
 
 
