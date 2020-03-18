@@ -111,10 +111,10 @@ $('.modal__form').validate({
 
   $('[type=tel]').mask('+7(000)000-00-00', {placeholder:"+7(__)__-__-"});
 
-
-
+ 
  
 
+   
 });
 
 

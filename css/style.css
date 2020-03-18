@@ -767,6 +767,20 @@ img {
   bottom: -2rem;
   font-size: 1.29rem; }
 
+.team {
+  margin-bottom: 100rem;
+  background-color: #131313; }
+
+.section-title__text--light {
+  min-width: 500px;
+  margin: auto;
+  margin-top: 10px;
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px; }
+
 .modal {
   opacity: 1;
   visibility: hidden;
@@ -866,6 +880,11 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    min-height: 465px; }
 
 @media screen and (max-width: 1000px) {
   html {
