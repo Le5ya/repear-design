@@ -108,7 +108,7 @@ $('.modal__form').validate({
    submitHandler: function(form) {
       $.ajax({
         type: "POST",
-        url: "send-php",
+        url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
           console.log('Ajax сработал. Ответ сервера: ' + response);
