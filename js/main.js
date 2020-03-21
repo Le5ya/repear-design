@@ -104,6 +104,19 @@ $('.modal__form').validate({
         required: "Заполните поле",
         email: "Введите корректный email"
     }
+   },
+   submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send-php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
    }
   });
 
@@ -112,7 +125,7 @@ $('.modal__form').validate({
   $('[type=tel]').mask('+7(000)000-00-00', {placeholder:"+7(__)__-__-"});
 
    //создание Яндекс-карты
-  ymaps.ready(function () {
+  /*ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [55.751574, 37.573856],
             zoom: 9
@@ -146,7 +159,7 @@ $('.modal__form').validate({
     myMap.geoObjects
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
-}); 
+});*/ 
 
    
 });
