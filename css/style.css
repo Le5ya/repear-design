@@ -367,17 +367,15 @@ template {
   visibility: hidden; }
   .policy__checkbox:checked + .policy__label::before {
     background: #e3b873 url("../image/check.svg") no-repeat center/0.8rem;
-    cursor: pointer;
-    margin-right: 0.64rem; }
+    cursor: pointer; }
 
 .policy__label {
   display: flex;
-  align-items: center;
-  font-size: 1.42rem; }
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border: 1px solid #e3b873;
     border-radius: 1px;
     cursor: pointer;
@@ -471,6 +469,8 @@ img {
   z-index: 99;
   background-color: #131313;
   padding: 24px 0; }
+  .header__container {
+    width: 95%; }
 
 .menu {
   display: flex;
@@ -715,9 +715,9 @@ img {
 
 .card__text {
   position: relative;
-  max-width: 17rem;
+  width: 17rem;
   margin: 0 auto;
-  margin-top: -8.5rem;
+  margin-top: -7.5rem;
   padding: 1.79rem 2.14rem;
   background-color: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
@@ -726,7 +726,7 @@ img {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
   margin-top: 0;
-  margin-bottom: 0.7rem; }
+  margin-bottom: 1.07rem; }
 
 .card__list {
   padding: 0 0 0 1rem;
@@ -750,20 +750,11 @@ img {
 .design__section-title {
   margin-top: 10rem; }
 
-.card__text {
-  position: relative;
-  max-width: 17.3rem;
-  margin: 0 auto;
-  margin-top: -8.5rem;
-  padding: 1.79rem 2.14rem;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
   margin-top: 0;
-  margin-bottom: 0.7rem; }
+  margin-bottom: 1.07rem; }
 
 .card__list {
   padding: 0 0 0 1rem;
@@ -804,7 +795,7 @@ img {
     color: #e3b873;
     text-transform: uppercase;
     margin-bottom: 0.64rem; }
-  .sequencing__span--light {
+  .sequencing__number--light {
     font-family: FuturaDemiC;
     font-style: normal;
     font-weight: 500;
@@ -820,57 +811,63 @@ img {
     line-height: 1.8rem;
     color: #fff; }
 
-.swiper-slide {
+.duties__row {
   display: flex;
   flex-wrap: wrap; }
-  .swiper-slide__pas {
-    flex-basis: 100%;
-    margin-bottom: 2.42rem;
-    padding-bottom: 2rem;
-    font-family: FuturaBookC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-    color: #fff; }
-  .swiper-slide__number {
-    font-size: 1.285rem;
-    line-height: 1.78rem;
-    font-family: 'Yeseva One', cursive;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 0.64rem; }
 
-.swiper-pagination {
+.duties__pas {
+  flex-basis: 100%;
+  margin-bottom: 2.42rem;
+  padding-bottom: 2rem;
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff; }
+
+.duties__number {
+  font-size: 1.285rem;
+  line-height: 1.78rem;
+  font-family: 'Yeseva One', cursive;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.64rem; }
+
+.duties-pagination {
   margin: auto; }
-  .swiper-pagination-bullet {
+  .duties-pagination-bullet {
     background-color: rgba(255, 255, 255, 0.7); }
-    .swiper-pagination-bullet-active {
+    .duties-pagination-bullet-active {
       background-color: #fff; }
 
-.swiper-button-prev, .swiper-button-next {
+.duties-button-prev, .duties-button-next {
   background-size: 42px;
   width: 42px;
   height: 14px; }
-  .swiper-button-prev::after, .swiper-button-next::after {
+  .duties-button-prev::after, .duties-button-next::after {
     display: none; }
 
-.swiper-button-prev {
+.duties-button-prev {
   left: 0;
   background: url("../image/arrow-prev.svg") no-repeat center; }
 
-.swiper-button-next {
+.duties-button-next {
   background: url("../image/arrow-next.svg") no-repeat center; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -2px; }
 
+.wrap {
+  margin-bottom: 2rem; }
+
 .team {
   margin-top: -50rem; }
   .team__row {
     position: absolute;
-    z-index: 100;
+    left: 0;
+    z-index: 10;
     margin-bottom: 3rem; }
   .team__section-title {
     min-width: 500px;
@@ -903,8 +900,7 @@ img {
     margin-top: 0;
     margin-bottom: 0.7rem; }
   .team__span {
-    padding: 0 0 0 1rem;
-    margin: auto;
+    justify-content: center;
     white-space: pre;
     width: 20rem;
     font-size: 1.5rem;
@@ -999,23 +995,22 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
-    margin-bottom: 3.428rem; }
-    .modal__input-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 3.482rem; }
-    .modal__input:last-of-type {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.482rem; }
+    .modal__input-group:last-of-type {
       margin-bottom: 1rem; }
-  .modal__policy {
-    margin-bottom: 2.7rem; }
+  .modal__input__policy {
+    margin-bottom: 5rem; }
   .modal__button {
+    margin-top: 2rem;
     align-self: flex-end;
     padding: 10px 5px; }
 
 .clients {
   margin-top: 10rem;
-  margin-bottom: 60rem; }
+  margin-bottom: 35rem; }
 
 .section-title__text {
   font-family: FuturaBookC;
@@ -1030,57 +1025,60 @@ img {
   margin-top: 4rem;
   width: 100%; }
 
-.card {
-  margin-left: 3rem; }
-  .card__person {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .card__title {
-    margin-left: 4rem; }
-  .card__review {
-    position: relative;
-    font-family: FuturaBookC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 180%;
-    min-width: 26.5rem;
-    margin-left: 0;
-    margin-top: 1rem;
-    padding: 0.5rem 0;
-    background-color: #fff;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-  .card__strong {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    max-width: 8.4rem;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    font-family: 'Yeseva One', cursive;
-    line-height: 1.7rem;
-    text-transform: uppercase;
-    background-color: #e3b873;
-    color: #fff;
-    padding: 1.214rem 2.6rem; }
-  .card__strong--left {
-    margin-left: 11.8rem; }
-  .card__span {
-    margin-left: 1rem; }
+.card__person {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card__title {
+  margin-left: 4rem; }
+
+.card__review {
+  position: relative;
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 180%;
+  width: 26.2rem;
+  margin-left: 0;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__strong {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 8.4rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Yeseva One', cursive;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+  background-color: #e3b873;
+  color: #fff;
+  padding: 1rem 1.5rem; }
+
+.card__strong--left {
+  margin-left: 9.3rem; }
+
+.card__span {
+  margin-left: 0.8rem;
+  margin-top: 0.4rem; }
 
 .footer {
   background: #131313 url("../image/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
   padding-bottom: 0;
-  margin-top: 20rem; }
-  .footer-wrap {
+  margin-top: 10rem; }
+  .footer__wrap {
     background-color: #181818;
-    max-width: 63.07rem;
+    max-width: 58.07rem;
     margin: auto;
     margin-top: -20rem;
-    margin-bottom: 3.714rem;
     padding: 2.5rem; }
   .footer__title {
     text-transform: uppercase;
@@ -1098,17 +1096,18 @@ img {
     margin: auto; }
   .footer__input {
     padding-top: 0.3rem; }
-    .footer__input__input-group {
+    .footer__input-group {
       display: flex;
       flex-direction: column;
-      flex-basis: 50%;
-      margin-bottom: 3.2rem; }
-      .footer__input__input-group--full-width {
+      flex-basis: 45%;
+      margin-bottom: 3rem; }
+      .footer__input-group--full-width {
         flex-basis: 100%;
         margin-bottom: 2rem; }
   .footer__policy {
+    margin-left: -1rem;
     flex-basis: 100%;
-    margin-bottom: 2rem; }
+    margin-bottom: 3.5rem; }
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }

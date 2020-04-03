@@ -39,11 +39,15 @@ $(document).ready(function () {
 			closeBtn = $('.modal__close');
 
 	modalBtn.on('click', function() {
+
 	modal.toggleClass('modal--visible');		
 	});
+
 	closeBtn.on('click', function() {
+
   modal.toggleClass('modal--visible');
 	});
+  
     // Вверх к началу jQ
 	var backTopBtn = $('.button__back-top'),
 		  sitePage = $('body,html'); 
@@ -93,36 +97,52 @@ $('.modal__form').validate({
    	email: true
  	}	
  },
+ //сообщения
  messages: {
     userName: {
-    	required: "Заполните поле",
+    	required: "Имя обязательно",
     	minlength: "Имя не короче  двух букв",
   		maxlength: "Не более 15 символов"
     }, 
-    userPhone: "Заполните поле",
+    userPhone: "Укажите телефон",
       userEmail: {
-        required: "Заполните поле",
+        required: "Укажите email",
         email: "Введите корректный email"
     }
    },
-   submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          console.log('Ajax сработал. Ответ сервера: ' + response);
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset();
-          modal.removeClass('modal--visible');
-        }
-      });
-   }
+   // submitHandler: function(form) {
+   //    $.ajax({
+   //      type: "POST",
+   //      url: "send.php",
+   //      data: $(form).serialize(),
+   //      success: function (response) {
+   //        console.log('Ajax сработал. Ответ сервера: ' + response);
+   //        alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+   //        $(form)[0].reset();
+   //        modal.removeClass('modal--visible');
+   //      }
+   //    });
+   // }
   });
 
   //Маска для телефона
+  // $('[type=tel]').mask('+7(000)000-00-00', {placeholder:"+7(___)___-__-__"});
+  // var player
+  // $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  //       player = new YT.Player('player', {
+  //         height: '465',
+  //         width: '100%',
+  //         videoId: 'RHzzLqJWqHs',
+  //         events: {
+  //           'onReady': videoPlay,
+          
+  //         }
+  //       });
+  //     })
 
-  $('[type=tel]').mask('+7(000)000-00-00', {placeholder:"+7(__)__-__-"});
+  // function videoPlay() {
+  //   event.target.player.playVideo();
+  // }
 
    //создание Яндекс-карты
   /*ymaps.ready(function () {

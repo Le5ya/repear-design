@@ -7,6 +7,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
 	<link rel="stylesheet" href="css/style.css">
 	
 	
@@ -15,16 +17,16 @@
 	<body>
 		<header class="header">
 			<div id="back-top"></div>
-			<div class="container">
+			<div class="container header__container">
 				<div class="menu">
 					<div class="logo menu__logo">Repair Design Project</div>
 					<nav class="nav menu__nav">
-						<a href="#" class="nav__item">Главная</a>
-						<a href="#" class="nav__item">Проекты</a>
-						<a href="#" class="nav__item">Замер</a>
-						<a href="#" class="nav__item">Команда</a>
-						<a href="#" class="nav__item">Отзывы</a>
-						<a href="#" class="nav__item">Контакты</a>
+						<a href="#hero" class="nav__item">Главная</a>
+						<a href="#projects" class="nav__item">Проекты</a>
+						<a href="#sequencing" class="nav__item">Замер</a>
+						<a href="#team" class="nav__item">Команда</a>
+						<a href="#clients" class="nav__item">Отзывы</a>
+						<a href="#nav" class="nav__item">Контакты</a>
 					</nav>
 					<!-- /.nav -->
 					<div class="contacts menu__contacts">
@@ -40,12 +42,11 @@
 		</header>
 
 		<main>
-			<section class="hero">
+			<section class="hero" id="hero">
 				<div class="instagram hero__instagram">
 						<a href="" class="instagram__link">Instagram</a>
 				</div>
 			
-					
 				   <div class="container">
            <div class="hero__content">
 					  <h1 class="title hero__title wow fadeInRight">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-Дону</span></h1>
@@ -60,11 +61,11 @@
 		 
 				
 				
-				<a href="#" class="hero__scroll-down wow rollIn">Листайте вниз</a>
+				<a href="#types" class="hero__scroll-down wow rollIn">Листайте вниз</a>
 			</section>
 			<!-- hero -->
 
-<section class="section section--dark projects">
+<section class="section section--dark projects" id="projects">
 <div class="container">
  <div class="row">
   <div class="col-50">
@@ -154,11 +155,12 @@
 					<!--section-title__image  -->
 				</div>
 				<!--section-title  -->
-				<div class="control__video video">
-					<img src="image/control/play-icon.svg" alt="play-icon"
-					 class="video__play">
-					
-				</div>
+				<div class="control__video video" id="player">
+					<a class="video__play" data-fancybox href="https://www.youtube.com/watch?v=RHzzLqJWqHs">
+					<img src="image/control/play-icon.svg" alt="play icon" class="video__play">
+				 </a>
+					<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+         </div>
 				<!-- .control__video -->
 				<p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
 
@@ -193,8 +195,7 @@
 	</section>
 			<!-- section control -->
 
-
- <section class="section types">
+    <section class="section types">
 				<div class="container">
 					<div class="section-title types__section-title">
 					<h2 class="section-title__heading">Виды ремонта
@@ -206,20 +207,21 @@
 					<!--section-title__image  -->
 				</div>
 				<!--section-title  -->
+				<div id="types"></div>
 				<div class="row">
 					  <div class="col-30">
 							<div class="card types__card">
-								<img src="image/types/type-1.jpg" alt="Косметический ремонт" class="card__image wow fadeInLeft">
+								<img src="image/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
 								<div class="card__text">
 								<h3 class="cadr__title">Косметический ремонт</h3>	        		
                    <ul class="card__list">
-									    <li class="card__items">Демонтаж старых покрыти</li>
-									    <li class="card__items">Поклейка обоев</li>
-									    <li class="card__items">Роспись стен и потолков</li>
-									    <li class="card__items">Укладка полов</li>
-									    <li class="card__items">Замена сантехники</li>
-									    <li class="card__items">Замена розеток и выключателей</li>
-									    <li class="card__items">Замена дверей</li>
+									    <li class="card__item">Демонтаж старых покрыти</li>
+									    <li class="card__item">Поклейка обоев</li>
+									    <li class="card__item">Роспись стен и потолков</li>
+									    <li class="card__item">Укладка полов</li>
+									    <li class="card__item">Замена сантехники</li>
+									    <li class="card__item">Замена розеток и выключателей</li>
+									    <li class="card__item">Замена дверей</li>
 										</ul>
 							       <!-- /.card__list -->
 							       <strong class="card__pricetag">900 руб / m <sup>2</sup></strong>
@@ -230,18 +232,18 @@
 						</div>
 						<!-- col -->			
 						<div class="col-30">
-							<div class="card types__card wow fadeInDown">
+							<div class="card types__card">
 								<img src="image/types/type-2.jpg " alt="Капитальный ремонт" class="card__image">
 							<div class="card__text">
 							<h3 class="cadr__title">Капитальный ремонт</h3>        			
 							  <ul class="card__list">
-								    <li class="card__items">Демонтаж старых покрыти</li>
-								    <li class="card__items">Поклейка обоев</li>
-								    <li class="card__items">Роспись стен и потолков</li>
-								    <li class="card__items">Укладка полов</li>
-								    <li class="card__items">Замена сантехники</li>
-								    <li class="card__items">Замена розеток и выключателей</li>
-								    <li class="card__items">Замена дверей</li>
+								    <li class="card__item">Демонтаж старых покрыти</li>
+								    <li class="card__item">Поклейка обоев</li>
+								    <li class="card__item">Роспись стен и потолков</li>
+								    <li class="card__item">Укладка полов</li>
+								    <li class="card__item">Замена сантехники</li>
+								    <li class="card__item">Замена розеток и выключателей</li>
+								    <li class="card__item">Замена дверей</li>
 									</ul>
 						       <!-- /.card__list -->
 						       <strong class="card__pricetag">1800 руб / m<sup>2</sup></strong>
@@ -253,35 +255,35 @@
 								<!-- .col-30 -->
 								<div class="col-30">
 									<div class="card types__card ">
-								<div><img src="image/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image wow fadeInleft" data-delay="2s">
+								<div><img src="image/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image wow fadeInleft" data-delay="2s"></div>
 							  <div class="card__text">	        
 							  <h3 class="cadr__title">Дизайнерский ремонт</h3> 
 									 <ul class="card__list">
-									    <li class="card__items">Демонтаж старых покрыти</li>
-									    <li class="card__items">Поклейка обоев</li>
-									    <li class="card__items">Роспись стен и потолков</li>
-									    <li class="card__items">Укладка полов</li>
-									    <li class="card__items">Замена сантехники</li>
-									    <li class="card__items">Замена розеток и выключателей</li>
-									    <li class="card__items">Замена дверей</li>
+									    <li class="card__item">Демонтаж старых покрыти</li>
+									    <li class="card__item">Поклейка обоев</li>
+									    <li class="card__item">Роспись стен и потолков</li>
+									    <li class="card__item">Укладка полов</li>
+									    <li class="card__item">Замена сантехники</li>
+									    <li class="card__item">Замена розеток и выключателей</li>
+									    <li class="card__item">Замена дверей</li>
 										</ul>
 							       <!-- /.card__list -->
 							       <strong class="card__pricetag">4000 руб / m<sup>2</sup></strong>
 							</div>
 								<!-- card_text -->
-							</div>
-							<!-- card -->			
 						</div>
-						<!-- .col -->
+						<!-- card -->	
+				</div>
+					<!-- .col -->
 				</div>
 				<!-- /row -->
-				</div>
+			</div>
 				<!-- /.container -->
  </section>
 			<!-- /.section types -->
 
 		<section class="section design">
-			<container class="container">
+			<div class="container">
 				<div class="section-title design__section-title">
 					<h2 class="section-title__heading">Дизайн проект
 					</h2>
@@ -289,13 +291,14 @@
 						<img src="image/design.svg" alt="design">
 						<!--section-title__image  -->
 						<p class="section-title__text">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</p>
+						</div>
 				<!--section-title  -->
 				<div class="row">
 					<div class="col-30">
 					<div class="card design__card">
 					<img src="image/design/design-1.jpg" alt="Минимальный" class="card__image">
 					<div class="card__text">
-					<h3 class="cadr__title">Минимальный</h3>	        		
+					<h3 class="card__title">Минимальный</h3>	        		
              <ul class="card__list">
 						    <li class="card__items">Измерительные чертеж</li>
 						    <li class="card__items">Перепланировка</li>
@@ -314,18 +317,18 @@
 					<div class="card design__card">
 					<img src="image/design/design-2.jpg" alt="Стандартный" class="card__image">
 					<div class="card__text">
-					<h3 class="cadr__title">Стандартный</h3>	        		
+					<h3 class="card__title">Стандартный</h3>	        		
              <ul class="card__list">
-						    <li class="card__items">Измерительные чертежи</li>
-						    <li class="card__items">Перепланировка</li>
-						    <li class="card__items">Планировка мебели</li>
-						    <li class="card__items">План потолков</li>
-						    <li class="card__items">План этажей</li>
-						    <li class="card__items">План электрики</li>
-						    <li class="card__items">План света</li>
+						    <li class="card__item">Измерительные чертежи</li>
+						    <li class="card__item">Перепланировка</li>
+						    <li class="card__item">Планировка мебели</li>
+						    <li class="card__item">План потолков</li>
+						    <li class="card__item">План этажей</li>
+						    <li class="card__item">План электрики</li>
+						    <li class="card__item">План света</li>
 							</ul>
 				       <!-- /.card__list -->
-				       <strong class="card__pricetag">400 руб / m <sup>2</sup></strong>
+				       <strong class="card__pricetag">400 руб/m <sup>2</sup></strong>
 					</div>
 							<!-- card_text -->
 						</div>
@@ -336,23 +339,23 @@
 						<div class="card design__card">
 					<img src="image/design/design-3.jpg" alt="Полный" class="card__image">
 					<div class="card__text">
-					<h3 class="cadr__title">Полный</h3>	        		
+					<h3 class="card__title">Полный</h3>	        		
              <ul class="card__list">
-						    <li class="card__items">Измерительные чертежи</li>
-						    <li class="card__items">Перепланировка</li>
-						    <li class="card__items">Планировка мебели</li>
-						    <li class="card__items">План потолков</li>
-						    <li class="card__items">План этажей</li>
-						    <li class="card__items">План электрики</li>
-						    <li class="card__items">План света</li>
-						    <li class="card__items">Стенные развертки</li>
-						    <li class="card__items">3D визуализация</li>
-						    <li class="card__items">Смета на материалы</li>
-						    <li class="card__items">Выезд на подбор материалов</li>
-						    <li class="card__items">Выбор мебели</li>					 
+						    <li class="card__item">Измерительные чертежи</li>
+						    <li class="card__item">Перепланировка</li>
+						    <li class="card__item">Планировка мебели</li>
+						    <li class="card__item">План потолков</li>
+						    <li class="card__item">План этажей</li>
+						    <li class="card__item">План электрики</li>
+						    <li class="card__item">План света</li>
+						    <li class="card__item">Стенные развертки</li>
+						    <li class="card__item">3D визуализация</li>
+						    <li class="card__item">Смета на материалы</li>
+						    <li class="card__item">Выезд на подбор материалов</li>
+						    <li class="card__item">Выбор мебели</li>					 
 							</ul>
 				       <!-- /.card__list -->
-				       <strong class="card__pricetag">900 руб / m <sup>2</sup></strong>
+				       <strong class="card__pricetag">900 руб/m <sup>2</sup></strong>
 					</div>
 							<!-- card_text -->
 						</div>
@@ -365,55 +368,92 @@
 			<!-- .container -->
 	</section>
 		<!-- /.section -->
-<section class="section sequencing sequencing--dark">
-	<div class="row sequencing__row">	
-	<div class="col-30">
-	<div class="container">
-		<h2 class="sequencing__span--light">Как мы работаем</h2>
+<section class="section sequencing sequencing--dark" id="sequencing">
+		<div class="container">
+	<div class="row">	
+	<div class="col-50">
+		<div class="section-title section-title--left">
+			<h2 class="sequencing__span--light">Как мы работаем</h2>
 			<h1 class="heading sequencing__heading--primary">6 шагов<span class="section-title__word"> до цели</h1>
-           <h2 class="sequencing__span--light">1/6</h2>
-				     <h3 class="underheading sequencing__underheading--primary">выезд на замеры<br>помещения</h3>
-				       <p class="text sequencing__text--light">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта</p>		
-				       <p class="text sequencing__text--light">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта</p>	
-        		 		   <div class="swiper-button-prev"></div>
-	    			       <div class="swiper-pagination"></div>
-	    			       <div class="swiper-button-next"></div>       		 	   
+		</div>
+		<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide swiper-no-swiping">
+					<div class="swiper-slide__text">
+						<h2 class="number sequencing__number--light">1/6</h2>
+					<h3 class="underheading sequencing__underheading--primary">выезд на замеры<br>помещения
+					</h3>
+					<p class="text sequencing__text--light">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта</p>
+					<p class="text sequencing__text--light">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта</p>
+					</div>
+				</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>	
         </div>
-        		<!-- 	</.container> -->			
-	    </div>
-	    <!-- <div class="col-30"> -->
+        
+
+        <!-- If we need navigation buttons -->
+    		<div class="swiper-button-prev"></div>
+    		<!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    		<div class="swiper-button-next"></div>
+</div>
+ </div>
+	    <!-- <div class="col-50"> -->
+
 		 <div class="col-50">
-		   <div class="row swipper__row">
-		   				<div class="swiper-slide__text">
-						<h3 class="swiper-slide__number">01</h3>
-							<span class="swiper-slide__pas">Выезд на замер<br>помещения</span>
+		 	<div class="wrap">
+		   <div class="row duties__row">
+		   				<div class="duties__text">
+						<h3 class="duties__number">01</h3>
+							<span class="duties__pas">Выезд на замер<br>помещения</span>
 					</div>
-					<div class="swiper-slide__text">
-						<h3 class="swiper-slide__number">02</h3>
-							<span class="swiper-slide__pas">состояние сметы</span>
+					<div class="duties__text">
+						<h3 class="duties__number">02</h3>
+							<span class="duties__pas">состояние сметы</span>
 					</div>
-					<div class="swiper-slide__text">
-						<h3 class="swiper-slide__number">03</h3>
-							<span class="swiper-slide__pas"></span>
+					<div class="duties__text">
+						<h3 class="duties__number">03</h3>
+							<span class="duties__pas"></span>
 								</div>
 							</div>
 							<!-- .row -->
-					<div class="row swipper__row">
-						<div class="swiper-slide__text">
-						<h3 class="swiper-slide__number">04</h3>
-							<span class="swiper-slide__pas">Закупка расходных<br> материалов</span>
+					<div class="row duties__row">
+						<div class="duties__text">
+						<h3 class="duties__number">04</h3>
+							<span class="duties__pas">Закупка расходных<br> материалов</span>
 					</div>	
-					<div class="swiper-slide__text">
-						<h3 class="swiper-slide__number">05</h3>
-							<span class="swiper-slide__pas">Ремонтно-отделочные<br> работы<br></span>
+					<div class="duties__text">
+						<h3 class="duties__number">05</h3>
+							<span class="duties__pas">Ремонтно-отделочные<br> работы<br></span>
 					</div>
-					<div class="swiper-slide__text">
-					<h3 class="swiper-slide__number">06</h3>
-					<span class="swiper-slide__pas">Приёмка и сдача<br>работ</span>
+					<div class="duties__text">
+					<h3 class="duties__number">06</h3>
+					<span class="duties__pas">Приёмка и сдача<br>работ</span>
 					</div>
-         </div><!-- .swiper-slide__text -->
-            
-        <img src="image/sequencing.png" alt="" class="image">
+         </div>
+       </div>
+       <!-- .wrap -->
+
+         <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+        	 <div class="image"> <img src="image/sequencing.png" alt="" class="image"></div>
+        </div>
+        <div class="swiper-slide">
+        	 <div class="image"> <img src="image/sequencing.png" alt="" class="image"></div>
+        </div>
+        <div class="swiper-slide">
+        	 <div class="image"> <img src="image/sequencing.png" alt="" class="image"></div>
+        </div>
+        ...
+    </div>
+  </div>
 			   
 				</div>
 					<!-- /.col-50 -->
@@ -423,7 +463,7 @@
 		<!-- .container -->
 	</section>
 	<!-- .section -->
-	<section class="section team">
+	<section class="section team" id="team">
 		<div class="container">
 			<div class="section-title team__section-title
 				section-title--light">
@@ -432,11 +472,11 @@
 						<img src="image/team.svg" alt="team">
 					</div>
 					<p class="team__section-title section-title__text--light">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
+
 				</div>
 				<!-- /.section-title team__section-title -->
-
 	  <div class="row team__row">
-		<div class="col col-30">
+		<div class="col-30">
 			<div class="team__baige"><img src="image/team/idea.png" alt=""></div>
 			<div class="card team__card">
 				<img src="image/team/Alex.png" alt="" class="card__image">
@@ -458,7 +498,7 @@
 			<strong class="team__standing">Опыт работы 6 лет</strong>
 			</div>
 		</div>
-	  <div class="col-30 team__col">
+	  <div class="col-30">
 		  <div class="baige"><img src="image/team/portfolio.png" alt=""></div>
 		   <div class="card team__card">
 		  	<img src="image/team/Dav.png" alt="" class="card-image">
@@ -471,13 +511,14 @@
 			</div>
 	   </div>
    <!-- .row -->
+   	</div>
+			<!-- .container -->	
    <div class="block"></div>
    <div class="resume"><p>Каждый сотрудник нашей компании является квалифицированным<br> штатным специалистом с опытом работы от 6 лет. У нас нет<br>гастарбайтеров, каждый сотрудник выполняет работу,<br> соответствующую его специальности.</p></div>
-		</div>
-			<!-- .container -->	
+	
   </section>
 		<!-- .team -->
-	<section class="section clients">
+	<section class="section clients" id="clients">
 		 <div class="container">
 		 	<div class=" section-title clients__section-title">
 		 		<h2 class="section-title__heading">Наши клиенты</h2>
@@ -488,7 +529,7 @@
 		 </div>
 		<!--.section-title  -->
 		 	<div class="row">
-		 		<div class="col col-30">
+		 		<div class="col-30">
 		 			<div class="card">
 		 				<div class="person card__person">
 		 				 <img src="image/clients/sav.png" alt="" class="card__image">
@@ -508,7 +549,7 @@
 		 			<!-- .card -->
 		 		</div>
 		 		<!-- .col -->
-		 		<div class="col col-30">
+		 		<div class="col-30">
 		 			<div class="card">
 		 				<div class="person card__person">
 		 					<img src="image/clients/bol.png" alt="" class="card__image">
@@ -528,7 +569,7 @@
 		 			<!-- .card -->
 		 		</div>
 		 		<!-- .col -->
-		 		<div class="col col-30">
+		 		<div class="col-30">
 		 			<div class="card">
            <div class="person card__person">
            	<img src="image/clients/khas.png" alt="" class="card__image">
@@ -555,57 +596,57 @@
 	</section>
 					<!--.clients  -->
 		</main>
+<footer class="footer section section--dark">
+	<div class="container">
+		<div class="footer__wrap">
+			<h3 class="footer__title">Остались вопросы?</h3>
+		<form action="#" class="form footer__form">
+				<div class="input-group footer__input-group">
+					<label for="user-name" class="label form__label label--light">Имя</label>
+	       <!-- /.lable form__lable -->
+	   			<input type="text" class="input form__input footer__input input--light"
+	   			 id="user-name" placeholder="Как Вас зовут">
+	   			<!-- input -->
+				</div>
+				<div class="input-group footer__input-group"> 
+	   			<label for="user-phon" class="label form__lable label label--light">
+	   			Телефон</label>
+	      	 <!-- /.label form__label -->
+	   			<input type="tel" class="input form__input footer__input input--light" id="user-phone" placeholder="Baш телефон">
+	   			<!-- input -->
+	   	  </div>
+	   	  <div class="input-group footer__input-group footer__input-group--full-width">
+	   	  	<label for="user-question" class="label form__label label--light">
+	   	  	  Вопрос</label>
+            <!-- /.label form__label -->
+		        <input type="text" class="input form__input modal__input input--light" id="user-email" placeholder="Я хочу спросить">
+		         <!-- input -->
+	   		</div>
 
- <footer class="footer section section--dark">
-	 <div class="container">
-				<div class="footer-wrap">
-					<h3 class="footer__title">Остались вопросы?</h3>
-					<form action="#" class="form footer__form">
-						<div class="input-group footer__input-group">
-							<label for="user-name" class="label form__label label--light">Имя</label>
-			       <!-- /.lable form__lable -->
-			   			<input type="text" class="input form__input footer__input input--light" id="user-name" placeholder="Как Вас зовут">
-			   			<!-- input -->
-						</div>
-						<div class="input-group footer__input-group">
-			   			</label> 
-			   			<label for="user-phon" class="label form__lable label label--light">Телефон</label>
-			      	 <!-- /.label form__label -->
-			   			<input type="tel" class="input form__input footer__input input--light" id="user-phone" placeholder="Baш телефон">
-			   			<!-- input -->
-			   	  </div>
-			   	  <div class="input-group footer__input-group--fill-width">
-			   	  	<label for="user-question" class="label form__label label--light">Вопрос</label>
-                <!-- /.label form__label -->
-   		         <input type="text" class="input form__input modal__input input--light" id="user-email" placeholder="Я хочу спросить">
-   		         <!-- input -->
-			   		</div>
-			   		<div class="policy footer__policy">
-			   			<input type="checkbox" name="policy-checkbox" id="policy-checkbox" 
-						  class="policy__checkbox" checked>
-						  <label for="policy-checkbox" class="policy__label policy__label--center">я соглашаюсь с   обработкой данных</lablel>
-			   		</div>
-			   		<!-- .policy -->
-			   		<button class="button button--primary footer__button">Отправить </button>		
-					  </form>			
+	   		<div class="policy footer__policy">
+	   				<input type="checkbox" name="policy-checkbox" id="policy-checkbox" 
+				  class="policy__checkbox" checked>
+				  <label for="policy-checkbox" class="policy__label policy__label--center">я соглашаюсь с обработкой данных</label>
+	   		</div>
+	   		<!-- .policy -->
+			   		<button class="button button--primary footer__button">Отправить </button>
+				</form>
+
 				</div>
 					<!--footer-wrap  -->
-					<div class="map footer__map"id="map">
-<<<<<<< HEAD
+					<div class="map footer__map" id="map">
+
 					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad6f9efcb07ed188b22bceebfdbd2d5a62d5f2ac1aa3010226cf59a2a2a9ede13&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script>	
-=======
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad6f9efcb07ed188b22bceebfdbd2d5a62d5f2ac1aa3010226cf59a2a2a9ede13&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script>
-						
->>>>>>> c26d36728810c8acf74fc5599731667f6b7ca354
+
 					</div>
 					<!-- /.map footer__map -->
-	 </div>
-	 <!-- .container -->
-			<div class="footer__menu">
+	
+			<div class="footer__menu ">
 				<div class="container">
+
 					<div class="menu">
 					<div class="logo menu__logo">Repair Design Project</div>
-					<nav class="nav menu__nav">
+					<nav class="nav menu__nav" id="nav">
 						<a href="#" class="nav__item">Главная</a>
 						<a href="#" class="nav__item">Проекты</a>
 						<a href="#" class="nav__item">Замер</a>
@@ -620,15 +661,19 @@
 						 <button class="button contacts__button button--primary" 
 						 data-toggle='modal'>Заказать звонок</button>
 				  </div>
+
 					</div>
 				</div>
 				<!-- menu-container -->
 				 <button class=" button button__back-top button--primary wow bounce">ВЕРНУТЬСЯ В НАЧАЛО</button> 
 			</div>	 
-   	</div>
    	<!-- .footer menu -->
+   	</div>
+	 <!-- .container -->
  </footer> 
- <div class="modal">       
+
+
+<div class="modal">       
 	<div class="modal__dialog">
 		<button class="modal__close"></button>		
 		<h3 class="modal__title">Оставьте заявку и наш менеджер<br>свяжется с вами </h3>
@@ -639,8 +684,7 @@
    		<input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как Вас зовут">
    		<!-- input -->
    	</div>
-   	<div class="input group modal__input-group">
-   		</label> 
+   	<div class="input group modal__input-group"> 
    		<label for="user-phon" class="label form__lable label label--light">Телефон</label>
        <!-- /.label form__label -->
    		<input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Baш телефон">
@@ -649,20 +693,19 @@
    	<div class="input group modal__input-group">
    		<label for="user-email" class="label form__label label--light">Email</label>
 		    <!-- /.label form__label -->
-		  <input type="email" name="userEmail" class="input form__input footer__input input--light" id="modal-user-email" placeholder="Ваш email">
+		  <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
 		  <!-- input -->
    	</div>				
    		<div class="policy modal__policy">
-   			<input type="checkbox" name="policy-checkbox" id="modal-policy-checkbox" 
-			  class="policy__checkbox" checked>
-			  <label for="policy-checkbox" class="policy__label">я соглашаюсь с   обработкой данных</lablel>
-   </div>
-			
+           <input type="checkbox" name="policy-checkbox" id="modal-policy-checkbox" 
+			     class="policy__checkbox" checked>
+			      <label for="policy-checkbox" class="policy__label">я соглашаюсь с   обработкой данных</label>
+   		 </div>
 		    <button class="button button--primary modal__button">Отправить заявку</button>	
     </form>
     <!-- /.form modal__form -->
    </div>
-			<!-- /.modal__dialog --></>
+			<!-- /.modal__dialog -->
   </div>
 		  <!-- .modal -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -670,6 +713,7 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.mask.min.js"></script> 
+	<script src="js/jquery.fancybox.min.js"></script>
 	 <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=de9c17f7-8286-4792-9ce1-26a5b7f1f0eb&lang=ru_RU" type="text/javascript">
 	     </script> -->
 	<script src="js/main.js"></script>
