@@ -1074,6 +1074,8 @@ img {
   padding-top: 3rem;
   padding-bottom: 0;
   margin-top: 10rem; }
+  .footer__container {
+    width: 95%; }
   .footer__wrap {
     background-color: #181818;
     max-width: 58.07rem;
